@@ -30,7 +30,6 @@ We will need to setup an index with the right mapping before we can use [Elastic
 ```bash
 $ curl -X PUT -H "Content-Type: application/json" 'http://localhost:9200/logs' -d '{
   "mappings": {
-    "logs" : {
       "properties" : {
         "timestamp": {
           "type": "date"
@@ -39,7 +38,6 @@ $ curl -X PUT -H "Content-Type: application/json" 'http://localhost:9200/logs' -
           "type": "geo_point"
         }
       }
-    }
   }
 }'
 ```
